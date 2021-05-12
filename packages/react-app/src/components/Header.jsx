@@ -5,11 +5,12 @@ import { PageHeader } from "antd";
 
 export default function Header() {
   return (
-    <a href="https://github.com/austintgriffith/scaffold-eth" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.formula1.com" target="_blank" rel="noopener noreferrer">
       <PageHeader
-        title="🏗 scaffold-eth"
-        subTitle="👩‍🔬 Buyer pays to mint NFT example"
-        style={{ cursor: "pointer" }}
+        className="Header"
+        title="Formula 1"
+        subTitle="NFT marketplace"
+        style={{ cursor: "pointer",color:"white" }}
       />
     </a>
   );

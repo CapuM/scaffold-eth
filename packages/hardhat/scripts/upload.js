@@ -28,7 +28,6 @@ const main = async () => {
   fs.writeFileSync("./uploaded.json",JSON.stringify(allAssets))
 
 
-
   /*
   //If you want to send value to an address from the deployer
   const deployerWallet = ethers.provider.getSigner()

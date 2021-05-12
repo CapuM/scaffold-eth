@@ -422,18 +422,18 @@ function App(props) {
 
     galleryList.push(
         <>
-      <Card style={{width:300}} key={loadedAssets[a].name}
+      <Card style={{width:300,padding:0}} key={loadedAssets[a].name}
         actions={cardActions}
         title={(
           <div>
-            {loadedAssets[a].name} <a style={{cursor:"pointer",opacity:0.33}} href={loadedAssets[a].external_url} target="_blank"><LinkOutlined /></a>
+            {loadedAssets[a].name} <a style={{cursor:"pointer",opacity:0.33}} href={loadedAssets[a].external_url} target="_blank"></a>
           </div>
         )}
       >
-        <img style={{maxWidth:130}} src={loadedAssets[a].image}/>
-        <div style={{opacity:0.77}}>
+        <img style={{width:"100%"}}src={loadedAssets[a].image}/>
+        {/* <div style={{opacity:0.77}}>
           {loadedAssets[a].description}
-        </div>
+        </div> */}
         {auctionDetails}
       </Card>
           </>
@@ -480,6 +480,8 @@ function App(props) {
 
       {/* ✏️ Edit the header and change the title to your project name */}
       <Header />
+      <img src="f1_logo.png" style={{position:"absolute",top:"15px",left:"45%"}}/>
+
       {networkDisplay}
 
       <BrowserRouter>
@@ -494,12 +496,12 @@ function App(props) {
           <Menu.Item key="/transfers">
             <Link onClick={()=>{setRoute("/transfers")}} to="/transfers">Transfers</Link>
           </Menu.Item>
-          <Menu.Item key="/ipfsup">
+          {/* <Menu.Item key="/ipfsup">
             <Link onClick={()=>{setRoute("/ipfsup")}} to="/ipfsup">IPFS Upload</Link>
           </Menu.Item>
           <Menu.Item key="/ipfsdown">
             <Link onClick={()=>{setRoute("/ipfsdown")}} to="/ipfsdown">IPFS Download</Link>
-          </Menu.Item>
+          </Menu.Item> */}
           <Menu.Item key="/debugcontracts">
             <Link onClick={()=>{setRoute("/debugcontracts")}} to="/debugcontracts">Debug Contracts</Link>
           </Menu.Item>
@@ -541,8 +543,8 @@ function App(props) {
                           <span style={{fontSize:16, marginRight:8}}>#{id}</span> {item.name}
                         </div>
                       )}>
-                        <div><img src={item.image} style={{maxWidth:150}} /></div>
-                        <div>{item.description}</div>
+                        <div><img src={item.image} style={{width:"100%"}} /></div>
+                        {/* <div>{item.description}</div> */}
                       </Card>
 
                       <div>
@@ -589,7 +591,7 @@ function App(props) {
                           address={item[0]}
                           ensProvider={mainnetProvider}
                           fontSize={16}
-                      /> =>
+                      /> 
                       <Address
                           address={item[1]}
                           ensProvider={mainnetProvider}
@@ -675,7 +677,7 @@ function App(props) {
         </Switch>
       </BrowserRouter>
 
-      <ThemeSwitch />
+      {/* <ThemeSwitch /> */}
 
 
       {/* 👨‍💼 Your account is in the top right with a wallet at connect options */}
@@ -686,17 +688,17 @@ function App(props) {
            userProvider={userProvider}
            mainnetProvider={mainnetProvider}
            price={price}
-           web3Modal={web3Modal}
-           loadWeb3Modal={loadWeb3Modal}
-           logoutOfWeb3Modal={logoutOfWeb3Modal}
+          //  web3Modal={web3Modal}
+          //  loadWeb3Modal={loadWeb3Modal}
+          //  logoutOfWeb3Modal={logoutOfWeb3Modal}
            blockExplorer={blockExplorer}
          />
-         {faucetHint}
+         {/* {faucetHint} */}
       </div>
 
       {/* 🗺 Extra UI like gas price, eth price, faucet, and support: */}
        <div style={{ position: "fixed", textAlign: "left", left: 0, bottom: 20, padding: 10 }}>
-         <Row align="middle" gutter={[4, 4]}>
+         {/* <Row align="middle" gutter={[4, 4]}>
            <Col span={8}>
              <Ramp price={price} address={address} networks={NETWORKS}/>
            </Col>
@@ -718,7 +720,7 @@ function App(props) {
                Support
              </Button>
            </Col>
-         </Row>
+         </Row> */}
 
          <Row align="middle" gutter={[4, 4]}>
            <Col span={24}>
@@ -733,7 +735,6 @@ function App(props) {
            </Col>
          </Row>
        </div>
-
     </div>
   );
 }

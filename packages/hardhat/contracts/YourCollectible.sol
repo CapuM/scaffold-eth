@@ -15,7 +15,7 @@ contract YourCollectible is ERC721URIStorage {
   Counters.Counter private _tokenIds;
 
   constructor(bytes32[] memory assetsForSale) public ERC721("YourCollectible", "YCB") {
-//    _setBaseURI("https://ipfs.io/ipfs/");
+  //_setBaseURI("https://ipfs.io/ipfs/");
     for(uint256 i=0;i<assetsForSale.length;i++){
       forSale[assetsForSale[i]] = true;
     }
