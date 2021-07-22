@@ -9,3 +9,13 @@
 .ant-card-body{
   padding: 0 !important;
 }
+
+.ant-menu-horizontal{
+  background-color: azure !important;
+
+}
+
+.ant-menu-horizontal > .ant-menu-item a:hover{
+color: #e10600 !important;
+
+}

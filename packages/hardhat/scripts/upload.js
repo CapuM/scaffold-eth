@@ -27,7 +27,6 @@ const main = async () => {
   fs.writeFileSync("../react-app/src/assets.js",finalAssetFile)
   fs.writeFileSync("./uploaded.json",JSON.stringify(allAssets))
 
-
   /*
   //If you want to send value to an address from the deployer
   const deployerWallet = ethers.provider.getSigner()
@@ -37,14 +36,12 @@ const main = async () => {
   })
   */
 
-
   /*
   //If you want to send some ETH to a contract on deploy (make your constructor payable!)
   const yourContract = await deploy("YourContract", [], {
   value: ethers.utils.parseEther("0.05")
   });
   */
-
 
   /*
   //If you want to link a library into your contract:

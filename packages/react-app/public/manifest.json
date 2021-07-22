@@ -17,8 +17,19 @@
       "src": "logo512.png",
       "type": "image/png",
       "sizes": "512x512"
-    },{
+    },
+    {
       "src": "f1_logo.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "auction_icon.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "auction_img.jpg",
       "type": "image/png",
       "sizes": "512x512"
     }
